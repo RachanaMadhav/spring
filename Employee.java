@@ -1,33 +1,44 @@
 package beans;
 
-import java.util.List;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Employee {
-	private String name;
-	private int sal;
-	private List<String> skills;
-	public String getName() {
-		return name;
+	/**
+	 * 
+	 */
+	
+	private int empcode;
+	private String empname;
+	private double salary;
+	
+	public Employee() {
+		super();
 	}
-	public void setName(String name) {
-		this.name = name;
+	
+	public Employee(int empcode, String empname, double salary) {
+		super();
+		this.empcode = empcode;
+		this.empname = empname;
+		this.salary = salary;
 	}
-	public int getSal() {
-		return sal;
+	public int getEmpcode() {
+		return empcode;
 	}
-	public void setSal(int sal) {
-		this.sal = sal;
+	public void setEmpcode(int empcode) {
+		this.empcode = empcode;
 	}
-	public void start(){
-		System.out.println("this is start method");
-			}
-	public void stop(){
-		System.out.println("this is stop");
+	public String getEmpname() {
+		return empname;
 	}
-	public List<String> getSkills() {
-		return skills;
+	public void setEmpname(String empname) {
+		this.empname = empname;
 	}
-	public void setSkills(List<String> skills) {
-		this.skills = skills;
+	public double getSalary() {
+		return salary;
 	}
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+	
 }
